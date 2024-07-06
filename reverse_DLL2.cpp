@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// this version reverses the DLL in just one pass
+// also known as the true reversal
+
 class node {
     public:
     node* prev;
