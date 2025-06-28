@@ -31,9 +31,9 @@ void printLL(node* head){
     }
 }
 
-node* deletePos(node* head, int k){
+node* deleteVal(node* head, int k){
     if (head == nullptr) return nullptr;
-    if(k == 1){
+    if(head->data == k){
         node* temp = head;
         head = head->next;
         delete temp;
@@ -41,11 +41,9 @@ node* deletePos(node* head, int k){
     }
     node* temp = head;
     node* prev = nullptr;
-    int cnt = 1;
-    while(temp != nullptr && cnt < k){
+    while(temp != nullptr && temp->data != k){
         prev = temp;
         temp = temp->next;
-        cnt++;
     }
     if (temp == nullptr) return head;
     prev->next = temp->next;
@@ -64,7 +62,7 @@ int main() {
     printLL(head);
     int k;
     cin >> k;
-    head = deletePos(head, k);
+    head = deleteVal(head, k);
     cout << endl;
 
     printLL(head);
