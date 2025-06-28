@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// this code implements basic of linked lists
-// creation, traversal, length, search
-
 class node {
     public:
     int data;
@@ -26,17 +23,7 @@ node* convert2LL(vector<int> &arr){
     return head;
 }
 
-int lengthofLL(node* head){
-    int cnt = 0;
-    node* temp = head;
-    while(temp){
-        temp = temp->next;
-        cnt++;
-    }
-    return cnt;
-}
-
-void print(node* head){
+void printLL(node* head){
     node* temp = head;
     while(temp){
         cout << temp->data << " ";
@@ -44,22 +31,27 @@ void print(node* head){
     }
 }
 
-int search(node* head, int val){
+node* deleteHead(node* head){
+    if (head == nullptr) return nullptr;
     node* temp = head;
-    while(temp){
-        if(temp->data == val) return 1;
-        temp = temp->next;
-    }
-    return 0;
+    head = head->next;
+    delete temp;
+    return head;
 }
 
 int main() {
-    vector <int> arr = {2, 3, 4, 7, 9};
+    int n;
+    cin  >> n;
+    vector <int> arr(n);
+    for(int i = 0; i < n; i++) cin >> arr[i];
+
     node* head = convert2LL(arr);
-    print(head);
-    cout << endl << "length of LL: " << lengthofLL(head);
-    int val;
-    cin >> val;
-    cout << endl << (search(head, val) ? "element found" : "not found");
+
+    printLL(head);
+
+    head = deleteHead(head);
+    cout << endl;
+
+    printLL(head);
     return 0;
 }
