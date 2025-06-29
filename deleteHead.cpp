@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// deleting the last node of the LL, aka head
+
 class node {
     public:
     int data;
