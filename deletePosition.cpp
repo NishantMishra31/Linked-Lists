@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// deleting a node with respect to its relative position 
+
 class node {
     public:
     int data;
