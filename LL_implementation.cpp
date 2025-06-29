@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// this code implements basic of linked lists
-// creation, traversal, length, search
+// this code implements basics of linked lists
+// such as creation, traversal, length, search
 
 class node {
     public:
