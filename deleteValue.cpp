@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// deleting a node with a specified value
 class node {
     public:
     int data;
