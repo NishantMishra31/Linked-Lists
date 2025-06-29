@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// deleting the last node of the LL, aka tail
+
 class node {
     public:
     int data;
