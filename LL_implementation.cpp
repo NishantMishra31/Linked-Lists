@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// this code implements basics of linked lists
+// this code implements basics of linked lists meant only for explanation
 // such as creation, traversal, length, search
 
 class node {
