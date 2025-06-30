@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// insert a node at its relative valition 
+// insert a node before a given value
 
 class node {
     public:
