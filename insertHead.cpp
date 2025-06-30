@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// deleting a node with a specified value
+// inserting at the first node of the LL, aka head
 
 class node {
     public:
     int data;
     node* next;
     public:
-    node(int data1, node* next1 = nullptr){
+    node(int data1, node* next1 = nullptr) {
         data = data1;
         next = next1;
     }
@@ -33,24 +33,9 @@ void printLL(node* head){
     }
 }
 
-node* deleteVal(node* head, int k){
-    if (head == nullptr) return nullptr;
-    if(head->data == k){
-        node* temp = head;
-        head = head->next;
-        delete temp;
-        return head;
-    }
-    node* temp = head;
-    node* prev = nullptr;
-    while(temp != nullptr && temp->data != k){
-        prev = temp;
-        temp = temp->next;
-    }
-    if (temp == nullptr) return head;
-    prev->next = temp->next;
-    delete temp;
-    return head;
+node* insertHead(node* head, int k){
+    node* temp = new node(k, head);
+    return temp;
 }
 
 int main() {
@@ -64,7 +49,7 @@ int main() {
     printLL(head);
     int k;
     cin >> k;
-    head = deleteVal(head, k);
+    head = insertHead(head, k);
     cout << endl;
 
     printLL(head);
