@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// deleting the first node of the LL, aka head
+// deleting the first node of the DLL, aka head
 
 class node {
     public:
@@ -35,12 +35,13 @@ void printLL(node* head){
     }
 }
 
-node* deleteHead(node* head){
+node* DLL_deleteHead(node* head){
     if (head == nullptr) return nullptr;
     node* prev = head;
     head = head->next;
     head->prev = nullptr;
     prev->next = nullptr;
+    delete prev;
     return head;
 }
 
@@ -54,7 +55,7 @@ int main() {
 
     printLL(head);
 
-    head = deleteHead(head);
+    head = DLL_deleteHead(head);
     cout << endl;
 
     printLL(head);
