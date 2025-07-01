@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// insert a node before a given value
+// insert a node before a given value in the LL
 
 class node {
     public:
