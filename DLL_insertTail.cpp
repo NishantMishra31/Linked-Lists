@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// inserting before the first node of the DLL, aka head
+// inserting at the last node of the DLL, aka tail
 
 class node {
     public:
@@ -35,10 +35,19 @@ void printLL(node* head){
     }
 }
 
-node* DLL_insertHead(node* head, int k){
-    node* temp = new node(k, head);
-    if (head)  head->prev =  temp;
-    head = temp;
+node* DLL_insertTail(node* head, int k){
+    if (head == nullptr){
+        head = new node(k, nullptr);
+        return head;
+    }
+    node* temp = head;
+    while(temp->next != nullptr){
+        temp = temp->next;
+    }
+    node* tail = new node(k, nullptr);
+    tail->prev = temp;
+    temp->next = tail;
+
     return head;
 }
 
@@ -55,7 +64,7 @@ int main() {
     int k;
     cin >> k;
 
-    head = DLL_insertHead(head, k);
+    head = DLL_insertTail(head, k);
     cout << endl;
 
     printLL(head);
