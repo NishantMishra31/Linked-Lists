@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// delete a node from the DLL by its relative position
+// delete a node from DLL by its value/data
 
 class node{
     public:
@@ -36,9 +36,9 @@ void printLL(node* head){
     }
 }
 
-node* DLL_deletePos(node* head, int k){
+node* DLL_deleteVal(node* head, int k){
     if (head == nullptr) return nullptr;
-    if (k == 1) {
+    if (head->data == k) {
         node* temp = head;
         head = head->next;
         if (head) head->prev = nullptr;
@@ -47,10 +47,8 @@ node* DLL_deletePos(node* head, int k){
     }
 
     node* temp = head;
-    int cnt = 1;
-    while(temp && cnt < k){
+    while(temp && temp->data != k){
         temp = temp->next;
-        cnt++;
     }
     
     if(!temp) return head;
@@ -77,7 +75,7 @@ int main(){
 
     int k;
     cin >> k;
-    head = DLL_deletePos(head, k);
+    head = DLL_deleteVal(head, k);
     printLL(head);
     return 0;
 }
