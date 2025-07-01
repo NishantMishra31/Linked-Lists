@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// inserting at the position node of the DLL
+// inserting at the node by value of the DLL
 
 class node {
     public:
@@ -35,9 +35,9 @@ void printLL(node* head){
     }
 }
 
-node* DLL_insertPos(node* head, int k, int pos){
-    if (pos <= 1 || head == nullptr) {
-        node* temp = new node(k, head);
+node* DLL_insertVal(node* head, int val, int k){
+    if (head->data == k){
+        node* temp = new node(val, head);
         if (head) head->prev = temp;
         return temp;
     }
@@ -45,21 +45,17 @@ node* DLL_insertPos(node* head, int k, int pos){
     node* temp = head;
     int cnt = 1;
 
-    while (temp && cnt < pos) {
+    while (temp && temp->data != k){
         temp = temp->next;
         cnt++;
     }
 
-    if (temp == nullptr) {
-        node* tail = head;
-        while (tail->next) tail = tail->next;
-        node* newNode = new node(k, nullptr, tail);
-        tail->next = newNode;
+    if (temp == nullptr){
         return head;
     }
 
     node* prev = temp->prev;
-    node* newNode = new node(k, temp, prev);
+    node* newNode = new node(val, temp, prev);
     if (prev) prev->next = newNode;
     temp->prev = newNode;
 
@@ -67,7 +63,7 @@ node* DLL_insertPos(node* head, int k, int pos){
 }
 
 
-int main() {
+int main(){
     int n;
     cin  >> n;
     vector <int> arr(n);
@@ -77,10 +73,10 @@ int main() {
 
     printLL(head);
 
-    int k, pos;
-    cin >> k >> pos;
+    int k, val;
+    cin >> k >> val;
 
-    head = DLL_insertPos(head, k, pos);
+    head = DLL_insertVal(head, val, k);
     cout << endl;
 
     printLL(head);
