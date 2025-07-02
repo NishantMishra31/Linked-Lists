@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// inserting before the first node of the DLL, aka head (changes the head)
+// inserting before the first node of the DLL, aka head
 
 class node {
     public:
