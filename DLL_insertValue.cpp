@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// inserting at the node by value of the DLL
+// inserting at the node by value of the node in the DLL
 
 class node {
     public:
