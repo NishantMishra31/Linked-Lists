@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// this code reverses a DLL with stack operations
+// in two passes and o(N) extra space
+
 class node {
     public:
     node* prev;
