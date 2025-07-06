@@ -2,7 +2,7 @@
 using namespace std;
 
 // this version reverses the DLL in just one pass
-// also known as the true reversal
+// also known as the true reversal of a DLL
 
 class node {
     public:
