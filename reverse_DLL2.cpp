@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// this version reverses the DLL in just one pass
+// this version reverses the DLL in just one pass and no extra space
 // also called the true reversal of a DLL
 
 class node {
