@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// this is a naive approach that calculates the total
+// number of nodes and returns the entire node
+
 class node{
     public:
     int data;
