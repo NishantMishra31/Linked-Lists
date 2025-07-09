@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// this code moves two pointers named
+// slow and fast to find out the middle of the LL
+
 class node{
     public:
     int data;
