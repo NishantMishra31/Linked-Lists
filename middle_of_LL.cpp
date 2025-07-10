@@ -2,7 +2,7 @@
 using namespace std;
 
 // this is a naive approach that calculates the total
-// number of nodes and returns the entire node
+// number of nodes and returns the middle node which sits at the mid-way
 
 class node{
     public:
