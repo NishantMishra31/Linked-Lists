@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// reversing a linked list- iterative method
+
 class node{
     public:
     int data;
