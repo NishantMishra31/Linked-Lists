@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// reversing a linked list- iterative method
+// reversing a linked list- stack method
 
 class node{
     public:
