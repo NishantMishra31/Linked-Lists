@@ -33,6 +33,22 @@ void printLL(node* head){
     }
 }
 
+node* reverseLL(node* head){
+    node* temp = head;
+    stack <int> stk;
+    while(temp){
+        stk.push(temp->data);
+        temp = temp->next;
+    }
+    temp = head;
+    while(temp){
+        temp->data = stk.top();
+        stk.pop();
+        temp = temp->next;
+    }
+    return head;
+}
+
 int main(){
     int n;
     cin >> n;
@@ -42,6 +58,11 @@ int main(){
     }
     // call
     node* head = convert2LL(arr);
+    printLL(head);
+
+    // call
+    cout << endl;
+    reverseLL(head);
     printLL(head);
     return 0;
 }
