@@ -2,6 +2,7 @@
 using namespace std;
 
 // reversing a linked list- stack method
+// this approach uses extra stack space to reverse the data in the LL
 
 class node{
     public:
