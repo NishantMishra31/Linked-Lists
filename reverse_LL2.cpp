@@ -2,6 +2,7 @@
 using namespace std;
 
 // reversing a linked list- iterative method
+// this approach iterates through the LL and changes the pointers
 
 class node{
     public:
