@@ -2,6 +2,7 @@
 using namespace std;
 
 // reversing a linked list- recursive method
+// this approach uses recursion on singular node of the LL
 
 class node{
     public:
