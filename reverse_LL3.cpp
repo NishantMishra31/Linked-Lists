@@ -3,7 +3,7 @@ using namespace std;
 
 // reversing a linked list- recursive method
 // this approach uses recursion on singular node of the LL
-// this approach also takes extra storing stack space for recursive calls
+// this approach also takes extra stack space for storing recursive calls
 
 class node{
     public:
