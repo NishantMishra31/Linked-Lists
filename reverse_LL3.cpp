@@ -2,7 +2,7 @@
 using namespace std;
 
 // reversing a linked list- recursive method
-// this approach uses recursion on single node of the LL, derived from recursion
+// this approach uses recursion on single node of the LL, derived from recursion itself
 // this approach also takes extra stack space for storing recursive calls
 
 class node{
