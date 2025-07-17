@@ -57,6 +57,7 @@ int main(){
     node* head = convert2LL(arr);
 
     // test this code with loops in the LL
-    cout << endl << (detectCycle(head) ? "true" : "false");
+    node* start = detectCycle(head);
+    cout << start;
     return 0;
 }

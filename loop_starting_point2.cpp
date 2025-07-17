@@ -37,12 +37,20 @@ void printLL(node* head){
 }
 
 node* detectCycle(node* head){
-    map <node*, int> mp;
-    node* temp = head;
-    while(temp){
-        if(mp.find(temp) != mp.end()) return temp;
-        mp[temp] = 1;
-        temp = temp->next;
+    if (!head || !head->next) return nullptr;
+    node* slow = head;
+    node* fast = head;
+    while(fast != nullptr && fast->next != nullptr){
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow == fast){
+            slow = head;
+            while(slow != fast){
+                slow = slow->next;
+                fast = fast->next;
+            }
+            return slow;
+        }
     }
     return nullptr;
 }
@@ -57,6 +65,7 @@ int main(){
     node* head = convert2LL(arr);
 
     // test this code with loops in the LL
-    cout << endl << (detectCycle(head) ? "true" : "false");
+    node* start = detectCycle(head);
+    cout << start;
     return 0;
 }
