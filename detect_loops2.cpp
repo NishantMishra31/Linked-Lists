@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+// this code uses tortoise and hare approach, also called Floyd's loop detection algirithm 
+// basic implementation of two pointers in LLs
 
 class node{
     public:
