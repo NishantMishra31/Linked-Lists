@@ -55,7 +55,6 @@ int main(){
     for (int i = 0; i < n; i++) cin >> arr[i];
     // call
     node* head = convert2LL(arr);
-    printLL(head);
 
     // test this code with loops in the LL
     cout << endl << (hasLoops(head) ? "true" : "false");
