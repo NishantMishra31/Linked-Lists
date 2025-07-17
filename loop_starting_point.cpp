@@ -2,6 +2,7 @@
 using namespace std;
 
 // this approach stores the nodes in a map and checks if they reappear to detect cycles
+// then it returns the node where cycle is detected as thr starting point of the loop
 // it takes extra space and time
 
 class node{

@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// this approach stores the nodes in a map and checks if they reappear to detect cycles
-// it takes extra space and time
+// this appraoch uses two pointers to detect loops and figure out the starting point of the loop
+// it is optimal solution ot this problem
 
 class node{
     public:
