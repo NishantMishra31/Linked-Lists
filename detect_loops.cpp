@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// this approach stores the nodes in a map and checks if they reappear to detect cycles
+// it takes extra space and time
+
 class node{
     public:
     int data;
