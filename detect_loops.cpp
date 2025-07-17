@@ -33,6 +33,18 @@ void printLL(node* head){
     }
 }
 
+bool hasLoops(node* head){
+    map <node*, int> mp;
+    node* temp = head;
+    while(temp){
+        if(mp.find(temp) != mp.end()) return true;
+        mp[temp] = 1;
+        temp = temp->next;
+    }
+    return false;
+}
+
+
 int main(){
     int n;
     cin >> n;
@@ -41,6 +53,8 @@ int main(){
     // call
     node* head = convert2LL(arr);
     printLL(head);
-    return 0;
 
+    // test this code with loops in the LL
+    cout << endl << (hasLoops(head) ? "true" : "false");
+    return 0;
 }
