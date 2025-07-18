@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// naive approach to calculate length of the loop using hashmaps
+// takes up extra space and time to execute
+
 class node{
     public:
     int data;
