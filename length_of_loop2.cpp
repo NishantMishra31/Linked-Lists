@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// tortoise and hare algorithm to calculate thee length of loop in LL
+// no extra space and most optimal soln
+
 class node{
     public:
     int data;
