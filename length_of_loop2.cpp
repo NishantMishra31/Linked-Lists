@@ -34,9 +34,25 @@ void printLL(node* head){
 }
 
 int lengthLoop(node* head){
-    
+    if(!head || !head->next) return 0;
+    node* temp = head;
+    node* slow = head;
+    node* fast = head;
+    while(fast && fast->next){
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow == fast){
+            int cnt = 1;
+            fast = fast->next;
+            while(fast != slow){
+                fast = fast->next;
+                cnt++;
+            }
+            return cnt;
+        }
+    }
+    return 0;
 }
-
 
 int main(){
     int n;
