@@ -58,7 +58,6 @@ node* oddevenLL(node* head){
     return head;
 }
 
-
 int main(){
     int n;
     cin >> n;
