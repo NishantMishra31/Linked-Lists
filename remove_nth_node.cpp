@@ -47,9 +47,11 @@ node* removeNthFromEnd(node* head, int n) {
     while(k--){
         temp = temp -> next;
     }
-    temp -> next = temp->next->next;
+    node* del = temp->next;
+    temp->next = temp->next->next;
+    delete(del);
     return head;
-    }
+}
 
 int main(){
     int n;
