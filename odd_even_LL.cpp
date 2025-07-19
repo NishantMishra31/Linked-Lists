@@ -37,6 +37,7 @@ void printLL(node* head){
 }
 
 node* oddevenLL(node* head){
+    if (!head || !head->next) return head;
     vector <int> arr;
     node* temp = head;
     while(temp){
