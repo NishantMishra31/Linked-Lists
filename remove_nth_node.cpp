@@ -1,9 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// optimal approach to print the odd-even nodes of the LL
-// does modification in place and takes up no extra space and time to execute
-
 class node{
     public:
     int data;
