@@ -34,37 +34,16 @@ void printLL(node* head){
 }
 
 node* getIntersectionNode(node *head1, node *head2) {
-    int n1 = 0, n2 = 0;
     node* temp1 = head1;
-    while(temp1){
-        n1++;
-        temp1 = temp1->next;
-    }
     node* temp2 = head2;
-    while(temp2){
-        n2++;
-        temp2 = temp2->next;
-    }
-    int n = 0;
-    temp1 = head1;
-    temp2 = head2;
-    if (n1 > n2){
-        n = n1 - n2;
-        
-        while(n--){
-            temp1 = temp1->next;
-        }
-    }
-    if (n2 > n1){
-        n = n2 - n1;
-        while(n--) temp2 = temp2->next;
-    }
     while(temp1 != temp2){
         temp1 = temp1->next;
         temp2 = temp2->next;
+        if (temp1 == temp2) return temp1;
+        if (!temp1) temp1 = head2;
+        if (!temp2) temp2 = head1;
     }
-    if (temp1) return temp1;
-    return nullptr;    
+    return nullptr; 
 }
 
 int main(){
