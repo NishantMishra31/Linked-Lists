@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// uses hashmaps to get the intersection node
+
 class node{
     public:
     int data;
@@ -31,13 +33,39 @@ void printLL(node* head){
     }
 }
 
+node* getIntersectionNode(node *head1, node *head2) {
+    map <node*, int> mp;
+    node* temp = head1;
+    while(temp){
+        mp[temp] = 1;
+        temp = temp->next;
+    }
+    temp = head2;
+    while(temp){
+        if(mp.find(temp) != mp.end()) return temp;
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
 int main(){
-    int n;
-    cin >> n;
-    vector <int> arr(n);
-    for(int i = 0; i < n; i++) cin >> arr[i];
+    int n, m;
+    cin >> n >> m;
+    vector <int> arr1(n);
+    for(int i = 0; i < n; i++) cin >> arr1[i];
+    vector <int> arr2(m);
+    for(int i = 0; i < m; i++) cin >> arr2[i];
     // call
-    node* head = convert2LL(arr);
-    printLL(head);
+    node* head1 = convert2LL(arr1);
+    node* head2 = convert2LL(arr2);
+    printLL(head1);
+    cout << endl;
+    printLL(head2);
+
+    // test this code with overlapping LLs
+    node* intersect = getIntersectionNode(head1, head2);
+    cout << endl;
+    if (intersect) cout << intersect->data;
+    else cout << "No intersection";
     return 0;
 }
