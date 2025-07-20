@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// uses hashmaps to get the intersection node
 
 class node{
     public:
@@ -34,18 +33,7 @@ void printLL(node* head){
 }
 
 node* getIntersectionNode(node *head1, node *head2) {
-    map <node*, int> mp;
-    node* temp = head1;
-    while(temp){
-        mp[temp] = 1;
-        temp = temp->next;
-    }
-    temp = head2;
-    while(temp){
-        if(mp.find(temp) != mp.end()) return temp;
-        temp = temp->next;
-    }
-    return nullptr;
+    
 }
 
 int main(){
