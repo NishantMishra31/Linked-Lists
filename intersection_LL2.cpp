@@ -2,6 +2,7 @@
 using namespace std;
 
 // better approach to get the intersection node
+// counts the number of extra nodes on the larger LL and brings both LLs together
 
 class node{
     public:
