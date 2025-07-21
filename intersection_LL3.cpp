@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// better approach to get the intersection node
+// optimal approach to get the intersection node
+// traverses through the LL to calculate the equality of nodes
 
 class node{
     public:
