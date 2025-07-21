@@ -2,6 +2,7 @@
 using namespace std;
 
 // uses hashmaps to get the intersection node
+// uses extra space to store and remember the nodes
 
 class node{
     public:
