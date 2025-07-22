@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// add two numbers given in two LLs in reverse order
+// return in reversed order in a new LL
+
 class node{
     public:
     int data;
